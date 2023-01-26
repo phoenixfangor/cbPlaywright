@@ -83,6 +83,8 @@ A `PlaywrightTestCase` CFC automatically creates a `variables.playwright` instan
 
 > If you have a `beforeAll` on your test case, make sure to call `super.beforeAll()`. Otherwise, you will
 > not have access to the `variables.playwright` instance.
+> If you have an `afterAll` on your test case, make sure to call `super.afterAll()`. Otherwise, you will
+> not have access to the `variables.playwright` instance, and clean-up will not happen.
 
 This `playwright` variable is an instance of the Java `Playwright` class. From this variable you can
 create browsers to start running your tests.
